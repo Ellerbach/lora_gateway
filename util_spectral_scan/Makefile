@@ -25,7 +25,15 @@ LGW_INC += $(LGW_PATH)/inc/loragw_hal.h
 
 ### Linking options
 
-LIBS := -lloragw -lrt
+ifeq ($(CFG_SPI),native)
+  LIBS := -lloragw -lrt
+else ifeq ($(CFG_SPI),ftdi)
+  LIBS := -lloragw -lrt -lmpsse
+else ifeq ($(CFG_SPI),mac)
+  LIBS := -lloragw -lmpsse
+else
+  LIBS := -lloragw -lrt
+endif
 
 ### General build targets
 
