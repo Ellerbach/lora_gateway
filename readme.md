@@ -143,5 +143,6 @@ To run the solution, just run the *./lora_pkt_fwd* in the *packet_forwarder* dir
 
 If all goes right, you should see few messages and after few seconds, the blue led of the RAK833 will turn on the mPCIe board.
 
-![running](/images/rapsberry.jpg)
+![running](/images/raspberry-radiator.jpg)
 
+*note*: The radiator is not an option. The RAK833 board is overheating quite a lot and will drop all packages when it will get too warm. Please make sure you find a way to cool it (a fan can be as well an option).
