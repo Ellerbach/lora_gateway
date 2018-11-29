@@ -8,6 +8,18 @@ We will describe the hardware as well as the software needed to have a full work
 
 This repository will be maintained to support new versions of both the LoRa Gateway and the LoRa Packet Forwarder.
 
+## How to use the Docker Container
+
+You can directly use this module as a Docker container:
+
+```bash
+docker pull ellerbach/lorawanpktfwdmodulerak833usb:0.0.1-arm32v7
+```
+
+This container has been built to be more specifically used as a [LoRa Network Packet Forwarder](https://github.com/lora-net/packet_forwarder). And be used with Azure IoT Edge.
+
+You will find the perfect use case in the [Azure LoRaWan Starter Kit](https://github.com/Azure/iotedge-lorawan-starterkit).
+
 ## Key Changes vs Original Semtech Repos
 
 In order to support in recent versions of [LoRa Gateway](https://github.com/Lora-net/lora_gateway) and [LoRa Network Packet Forwarder](https://github.com/lora-net/packet_forwarder) modifications had to be done in the core Lora Gateway library from Semtech:
