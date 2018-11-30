@@ -65,7 +65,7 @@ docker-machine start default
 eval "$(docker-machine env default)"
 ```
 
-- Then build the container Mac.Dockerfile
+- Then build the container amd64.Dockerfile
 
 ```bash
 dicker build -t lorapktfwd -f amd64.Dockerfile .
