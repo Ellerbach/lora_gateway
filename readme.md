@@ -10,15 +10,55 @@ This repository will be maintained to support new versions of both the LoRa Gate
 
 ## How to use the Docker Container
 
+This container has been built to be more specifically used as a [LoRa Network Packet Forwarder](https://github.com/lora-net/packet_forwarder). And be used with Azure IoT Edge.
+
+You will find the perfect use case in the [Azure LoRaWan Starter Kit](https://github.com/Azure/iotedge-lorawan-starterkit).
+
+### Rapsberry Pi and other arm32v7 processors
+
 You can directly use this module as a Docker container:
 
 ```bash
 docker pull ellerbach/lorawanpktfwdmodulerak833usb:0.0.1-arm32v7
 ```
 
-This container has been built to be more specifically used as a [LoRa Network Packet Forwarder](https://github.com/lora-net/packet_forwarder). And be used with Azure IoT Edge.
+When you'll run it, make sure you run it with privileges:
 
-You will find the perfect use case in the [Azure LoRaWan Starter Kit](https://github.com/Azure/iotedge-lorawan-starterkit).
+```bash
+docker run --privileged ellerbach/lorawanpktfwdmodulerak833usb:0.0.1-arm32v7
+```
+
+### Running on a Mac OSX
+
+This is a bit more complicated, please check the specific steps for [Mac OSX](mac_readme.md). Once you've installed VirtualBox and setup the USB port, you can either continue the process and rebuild the docker file, either just use it.
+
+```bash
+docker pull ellerbach/lorawanpktfwdmodulerak833usb:0.0.1-amd64
+```
+
+When you'll run it, make sure you run it with privileges:
+
+```bash
+docker run --privileged ellerbach/lorawanpktfwdmodulerak833usb:0.0.1-amd64
+```
+
+### Running on Linux 64 bits OS
+
+You can directly enjoy the container on any Linux 64 bit OS.
+
+```bash
+docker pull ellerbach/lorawanpktfwdmodulerak833usb:0.0.1-amd64
+```
+
+When you'll run it, make sure you run it with privileges:
+
+```bash
+docker run --privileged ellerbach/lorawanpktfwdmodulerak833usb:0.0.1-amd64
+```
+
+### Running on Windows
+
+So far, this scenario is not supported because of USB port acces limitations. There is still a way using VirtualBox, similar to the [Mac OSX](mac_readme.md) process. But it does involve using an older version of Docker.
 
 ## Key Changes vs Original Semtech Repos
 
