@@ -18,7 +18,7 @@ Sometimes the docker machine starts, check if it is running and stop it if it is
 
 ```bash
 docker-machine ls
-docker stop default
+docker-machine stop default
 ```
 
 - Then add the USB support to the machine:
@@ -59,7 +59,7 @@ Make sure you enter Vendor ID as 0x0403 so 0403 in the graphical interface and t
 docker-machine start default
 ```
 
-- Then make sure this default environement will be launch when the docker command is called:
+- Then make sure this default environment will be launch when the docker command is called:
 
 ```bash
 eval "$(docker-machine env default)"
@@ -68,7 +68,7 @@ eval "$(docker-machine env default)"
 - Then build the container amd64.Dockerfile
 
 ```bash
-dicker build -t lorapktfwd -f amd64.Dockerfile .
+docker build -t lorapktfwd -f amd64.Dockerfile .
 ```
 
 - Run the docker container in privileged mode
